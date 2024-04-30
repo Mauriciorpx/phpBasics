@@ -23,7 +23,7 @@
 
     /* Los MIME types, también conocidos como "media types" o "content types", son cadenas de texto que se envían junto con un archivo para indicar el tipo de archivo, describiendo el formato del contenido */
 
-    if(mime_content_type($_FILES['fichero']['tmp_name']!="image/jpeg" || $_FILES['fichero']['tmp_name']!="image/png" )){
+    if(mime_content_type($_FILES['fichero']['tmp_name'])!="image/jpeg" && mime_content_type($_FILES['fichero']['tmp_name'])!="image/png" ){
         echo "El tipo de archivo no es permitido";
     }
 
